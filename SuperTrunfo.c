@@ -13,7 +13,8 @@ int main () {
 
     char  estado2[20], cidade2[20], codigo2[10];
     int  população2, pontosturisticos2;
-    float  pib2, area2, densidade2, pibpercap2;
+    float area2, densidade2;
+    double pib2, pibpercap2;
 
 // SISTEMA DE CADASTRO DA CARTA 1
      
@@ -41,10 +42,12 @@ int main () {
     printf("DIGITE A QUANTIDADE DE PONTOS TURISTCOS: ");
     scanf("%d", &pontosturisticos1);
 
+    // mutiplicando o valor do pib pra chegar no valor em bilhões
+    
     pib1 = pib1 * 1000000000.0;
     
     //Calculando Densidade Populacional e PIB per Capita da Carta 1
-    densidade1 = (double) população1 / area1;
+    densidade1 =  população1 / area1;
     pibpercap1 = (double) pib1 / população1;
     
     printf("\n\n"); // PULAR UMA LINHA PRA ORGANIZAÇÃO DA IMPRESSÃO
@@ -56,7 +59,7 @@ int main () {
     printf(" Cidade: %s", cidade1);
     printf(" População: %d \n", população1);
     printf(" Area: %.2f km² \n", area1);            
-    printf(" PIB: %.2f bihões de reais \n", pib1 / 1000000000.0);
+    printf(" PIB: %.2f bihões de reais \n", pib1 / 1000000000.0);  //divisão do valor RJ pra abreviar o valor na impressão
     printf(" Numero de pontos turisticos: %d \n", pontosturisticos1);
     printf(" Densidade Populacional: %.2f hab/km \n", densidade1);
     printf(" PIB per capita: %.2lf Reais \n\n", pibpercap1);
@@ -83,14 +86,18 @@ int main () {
     scanf("%f", &area2);
     
     printf("DIGITE O VALOR DO PRODUTO INTERNO BRUTO (PIB): ");
-    scanf(" %f", &pib2);
+    scanf(" %lf", &pib2);
     
     printf("DIGITE A QUANTIDADE DE PONTOS TURISTCOS: ");
     scanf("%d", &pontosturisticos2);
+
+    // mutiplicando o valor do pib pra chegar no valor em bilhões
+    
+    pib2 = pib2 * 1000000000.0;
     
     //Calculando Densidade Populacional e PIB per Capita da Carta 2 
-    densidade2 = população2 / area2;
-    pibpercap2 = pib2 / população2;
+    densidade2 = (double) população2 / area2;
+    pibpercap2 = (double) pib2 / população2;
     
     printf("\n\n"); // PULAR UMA LINHA PRA ORGANIZAÇÃO DA IMPRESSÃO
 
@@ -101,10 +108,10 @@ int main () {
     printf(" Cidade: %s", cidade2);
     printf(" População: %d \n", população2);
     printf(" Area: %.2f km² \n", area2);            
-    printf(" PIB: %.2f bilhões de reais \n", pib2);
+    printf(" PIB: %.2f bilhões de reais \n", pib2 / 1000000000.0);  //divisão pra abeviar o valor na impressão
     printf(" Numero de pontos turisticos: %d \n", pontosturisticos2);
     printf(" Densidade Populacional: %.2f hab/km \n", densidade2);
-    printf(" PIB per capita: %.2f Reais \n\n", pibpercap2);
+    printf(" PIB per capita: %.2lf Reais \n\n", pibpercap2);
 
 
 
