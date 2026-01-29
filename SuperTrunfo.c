@@ -136,6 +136,59 @@ int main () {
     printf(" PIB per capita: %.2lf Reais \n", pibpercap2);
     printf(" Super Poder: %.Lf \n\n", SuperPoder2);
 
+    // Comparação das cartas usando a estrutura de decisão if-else
+
+    if (população1 > população2)
+    {
+        printf("A população da Carta 1 (São Paulo) venceu!\n");
+    } else {
+        printf("A população da Carta 2 (Rio de janeiro) venceu!\n");
+    }
+    
+    if (area1 > area2)
+    {
+        printf("Area da Carta 1 (São Paulo) venceu!\n");
+    } else {
+        printf("Area da Carta 2 (Rio de janeiro) venceu!\n");
+    }
+    
+    if (pib1 > pib2)
+    {
+        printf("PIB da Carta 1 (São Paulo) venceu!\n");
+    } else {
+        printf("PIB da Carta 2 (Rio de janeiro) venceu!\n");
+    }    
+
+    if (pontosturisticos1 > pontosturisticos2)
+    {
+        printf("Pontos Turisticos da Carta 1 (São Paulo) venceu!\n");
+    } else {
+        printf("Pontos Turisticos da Carta 2 (Rio de janeiro) venceu\n");
+    }    
+
+    
+    if ( densidade1 < densidade2)
+    {
+        printf("A densidade populacional da Carta 1 (São Paulo) venceu!\n");
+    } else {
+        printf("A densidade populacional da Carta 2 (Rio de janeiro) venceu\n");
+    }    
+    
+    if (pibpercap1 > pibpercap2)
+    {
+         printf("O PIB Percap da Carta 1 (São Paulo) venceu!\n");
+    }  else {
+        printf("O PIB Percap da Carta 2 (Rio de janeiro) venceu\n");
+    }
+
+    if (SuperPoder1 > SuperPoder2)
+    {
+         printf("O super poder da Carta 1 (São Paulo) venceu!\n");
+    } else {
+        printf("O super poder da Carta 2 (Rio de janeiro) venceu\n\n");
+    }
+    
+
     //Declaração de variaveis dos resultados das comparações das cartas
     
     int Resultado1, Resultado2,
