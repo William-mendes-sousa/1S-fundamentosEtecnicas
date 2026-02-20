@@ -32,6 +32,7 @@
         estoqueA * valorA, 
         estoqueB * valorB,  
         (estoqueA * valorA) > (estoqueB * valorB));
+        
 
 
     return 0;
