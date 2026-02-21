@@ -4,15 +4,14 @@ int main () {
 
 // VARIAVEIS CARTA 1   
     
-    char estado1[20], cidade1[20], codigo1[10];
+    char estado1[20] = ("SP"), cidade1[20] = ("SaoPaulo"), codigo1[10] = ("A01");
+    int população1 = 12325000;
     
-    unsigned long int população1;
+    int pontosturisticos1 = 50; 
     
-    int pontosturisticos1;
+    float area1 = 1521.11, densidade1 = 8102.47;
     
-    float area1, densidade1;
-    
-    double pib1, pibpercap1;
+    double pib1 = 699.28, pibpercap1 = 56724.32;
     
     long double SuperPoder1;
 
@@ -26,55 +25,19 @@ int main () {
     
     float area2, densidade2; 
     
-    double pib2, pibpercap2;
-
-    long double SuperPoder2;
-
-// SISTEMA DE CADASTRO DA CARTA 1
-     
-    printf("   SISTEMA DE CADASTRO DE CARTAS (CARTA 1) \n\n"); //TITULO DO SISTEMA DE CADASTRO
     
-    printf("DIGITE O NOME DO ESTADO: ");
-    fgets(estado1, 20, stdin);
-    
-    printf("DIGITE O CODIGO DA CARTA: ");
-    scanf("%s", codigo1);
-    
-    printf("DIGITE O NOME DA CIDADE: ");
-    scanf("%*c");                                  // LIMPA BUFFER DO ENTER
-    fgets(cidade1, 20, stdin);
-    
-    printf("DIGITE O NUMERO DE HABITANTES: ");
-    scanf("%ld", &população1);
-    
-    printf("AREA DA CIDADE EM QUILOMETROS QUADRADOS: ");
-    scanf("%f", &area1);
-   
-    printf("DIGITE O VALOR DO PRODUTO INTERNO BRUTO (PIB): ");
-    scanf("%lf", &pib1);
-    
-    printf("DIGITE A QUANTIDADE DE PONTOS TURISTCOS: ");
-    scanf("%d", &pontosturisticos1);
-
-    // mutiplicando o valor do pib pra chegar no valor em bilhões
-     pib1 = pib1 * 1000000000.0;
-    
-    //Calculando Densidade Populacional e PIB per Capita da Carta 1
-    densidade1 =  população1 / area1;
-    pibpercap1 = (double) pib1 / população1;
-
-    //Calculando a soma do super poder 
+   //Calculando a soma do super poder 
     SuperPoder1 = (long double) população1 + area1 + pib1 + 
     pontosturisticos1 + densidade1 + pibpercap1;
     
     printf("\n\n"); // PULAR UMA LINHA PRA ORGANIZAÇÃO DA IMPRESSÃO
     
-//IMPRESSÃO DA CARTA 1
+    //IMPRESSÃO DA CARTA 1
     printf(" CARTA: 1 \n\n");
-    printf(" Estado: %s ", estado1);
+    printf(" Estado: %s\n ", estado1);
     printf("Codigo: %s \n", codigo1);
-    printf(" Cidade: %s", cidade1);
-    printf(" População: %ld \n", população1);
+    printf(" Cidade: %s\n", cidade1);
+    printf(" População: %d \n", população1);
     printf(" Area: %.2f km² \n", area1);            
     printf(" PIB: %.2f bihões de reais \n", pib1 / 1000000000.0);  //divisão do valor RJ pra abreviar o valor na impressão
     printf(" Numero de pontos turisticos: %d \n", pontosturisticos1);
@@ -82,32 +45,7 @@ int main () {
     printf(" PIB per capita: %.2lf Reais \n", pibpercap1);
     printf(" Super Poder: %.Lf \n\n", SuperPoder1);
 
-    // SISTEMA DE CADASTRO DA CARTA 2
     
-    printf("   SISTEMA DE CADASTRO DE CARTAS (CARTA2 ) \n\n"); //TITULO DO SISTEMA DE CADASTRO
-    
-    scanf("%*c");                                  // LIMPA BUFFER DO ENTER
-    printf("DIGITE O NOME DO ESTADO: ");
-    fgets(estado2, 20, stdin);
-    
-    printf("DIGITE O CODIGO DA CARTA: ");
-    scanf("%s", codigo2);
-    
-    printf("NOME DA CIDADE: ");
-    scanf("%*c");                                // LIMPA BUFFER DO ENTER
-    fgets(cidade2, 20, stdin);
-    
-    printf("DIGITE O NUMERO DE HABITANTES: ");
-    scanf(" %ld", &população2);
-    
-    printf("AREA DA CIDADE EM QUILOMETROS QUADRADOS: ");
-    scanf("%f", &area2);
-    
-    printf("DIGITE O VALOR DO PRODUTO INTERNO BRUTO (PIB): ");
-    scanf(" %lf", &pib2);
-    
-    printf("DIGITE A QUANTIDADE DE PONTOS TURISTCOS: ");
-    scanf("%d", &pontosturisticos2);
 
     // mutiplicando o valor do pib pra chegar no valor em bilhões
     
@@ -155,9 +93,9 @@ int main () {
             printf ("Nimguem vence");
         } else if (população1 > população2)
         {
-            printf("Carta 1 vence! São paulo tem a maior população com %ld habitantes\n\n", população1);
+            printf("Carta 1 vence! São paulo tem a maior população com %d habitantes\n\n", população1);
         } else {
-            printf("Carta 2 Vence! Rio de janeiro tem a maior população com %ld habitantes\n\n", população2);
+            printf("Carta 2 Vence! Rio de janeiro tem a maior população com %d habitantes\n\n", população2);
         }
         break; 
      case 2:
@@ -199,9 +137,9 @@ int main () {
             printf ("Nimguem vence\n\n");
         } else if (densidade1 < densidade2)
         {
-            printf("Carta 1 vence! São Paulo tem maior Densidade populacional com %.2f  hab/km\n\n", densidade1);
+            printf("Carta 1 vence! São Paulo tem menor densidade populacional com %.2f  hab/km\n\n", densidade1);
         } else {
-            printf("Carta 2 Vence! Rio de janeiro tem maior Densidade populacional com %.2f  hab/km\n\n", densidade2);
+            printf("Carta 2 Vence! Rio de janeiro tem menor densidade populacional com %.2f  hab/km\n\n", densidade2);
         }
         break;      
      default: {
