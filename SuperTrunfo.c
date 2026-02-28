@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main () {
 
 // VARIAVEIS CARTA 1   
     
     char estado1[20] = ("SP"), cidade1[20] = ("SaoPaulo"), codigo1[10] = ("A01");
-    int população1 = 12325000;
     
-    int pontosturisticos1 = 50; 
+    int população1 = 12325000, pontosturisticos1 = 50; 
     
     float area1 = 1521.11, densidade1 = 8102.47;
     
@@ -15,24 +16,26 @@ int main () {
     
     long double SuperPoder1;
 
-    // VARIAVEIS CARTA 2
+// VARIAVEIS CARTA 2
 
-    char estado2[20], cidade2[20], codigo2[10];
+    char estado2[20]  = ("RJ"), cidade2[20] = ("RioDeJaneiro"), codigo2[10] = ("B02");
     
-    unsigned long int população2;
+    int população2 = 6748000, pontosturisticos2 = 30, propriedade;
     
-    int pontosturisticos2, propriedade;
+    float area2 = 1200.25, densidade2 = 8102.47;
     
-    float area2, densidade2; 
+    double pib2 = 300.50, pibpercap2 = 44532.91;
+
+    long double SuperPoder2;
+
+// mutiplicando o valor do pib pra chegar no valor em bilhões
+    pib1 = pib1 * 1000000000.0;
     
-    
-   //Calculando a soma do super poder 
+//Calculando a soma do super poder 
     SuperPoder1 = (long double) população1 + area1 + pib1 + 
     pontosturisticos1 + densidade1 + pibpercap1;
     
-    printf("\n\n"); // PULAR UMA LINHA PRA ORGANIZAÇÃO DA IMPRESSÃO
-    
-    //IMPRESSÃO DA CARTA 1
+//IMPRESSÃO DA CARTA 1
     printf(" CARTA: 1 \n\n");
     printf(" Estado: %s\n ", estado1);
     printf("Codigo: %s \n", codigo1);
@@ -45,28 +48,22 @@ int main () {
     printf(" PIB per capita: %.2lf Reais \n", pibpercap1);
     printf(" Super Poder: %.Lf \n\n", SuperPoder1);
 
-    
-
-    // mutiplicando o valor do pib pra chegar no valor em bilhões
+// mutiplicando o valor do pib pra chegar no valor em bilhões
     
     pib2 = pib2 * 1000000000.0;
     
-    //Calculando Densidade Populacional e PIB per Capita da Carta 2 
-    densidade2 =  população2 / area2;
-    pibpercap2 = (double) pib2 / população2;
-    
-    //Calculando a soma do super poder 
+//Calculando a soma do super poder 
     SuperPoder2 = (long double) população2 + area2 + pib2 + 
     pontosturisticos2 + densidade2 + pibpercap2;
     
-        printf("\n\n"); // PULAR UMA LINHA PRA ORGANIZAÇÃO DA IMPRESSÃO
+        printf("\n"); // PULAR UMA LINHA PRA ORGANIZAÇÃO DA IMPRESSÃO
 
 //IMPRESSÃO DA CARTA 2
     printf(" CARTA: 2 \n\n");
-    printf(" Estado: %s ", estado2);
+    printf(" Estado: %s\n ", estado2);
     printf("Codigo: %s \n", codigo2);
-    printf(" Cidade: %s", cidade2);
-    printf(" População: %ld \n", população2);
+    printf(" Cidade: %s\n", cidade2);
+    printf(" População: %d \n", população2);
     printf(" Area: %.2f km² \n", area2);            
     printf(" PIB: %.2f bilhões de reais \n", pib2 / 1000000000.0);  //divisão pra abeviar o valor na impressão
     printf(" Numero de pontos turisticos: %d \n", pontosturisticos2);
@@ -74,13 +71,20 @@ int main () {
     printf(" PIB per capita: %.2lf Reais \n", pibpercap2);
     printf(" Super Poder: %.Lf \n\n", SuperPoder2);
 
+   printf("XXXX BEM VINDO AO JOGO SUPER TRUNFO ! XXXX\n\n");
+   printf("Escolha 2 propriedades  ")
+   
+   
+   
+   
+   /*                                                                              
     printf("### Escolha uma propriedade pra comparação ###\n\n");
     printf("1. Poulação\n");
     printf("2. Area\n");
     printf("3. PIB\n");
     printf("4. Pontos Turisticos\n");
     printf("5. Densidade demografica\n");
-    printf("Propriedade escolhida:");
+    printf("Propriedade escolhida: ");
     scanf("%d", &propriedade);
 
     printf("\n");
@@ -148,9 +152,7 @@ int main () {
         break;  
     
 
-    }
-
-
+    }   */
 
 
 return 0;
